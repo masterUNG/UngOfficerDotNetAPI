@@ -1,13 +1,14 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ungofficer/states/list_officer.dart';
 import 'package:ungofficer/utility/app_http_override.dart';
 
 void main() {
   HttpOverrides.global = AppHttpOverride();
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const GetMaterialApp(
       home: ListOfficer(),
     );
   }
